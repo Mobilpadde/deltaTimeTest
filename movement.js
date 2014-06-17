@@ -40,7 +40,7 @@ document.addEventListener("keydown", function(e){
 	if(kc == 68 || kc == 39){ keys.right 	= true }
 })
 document.addEventListener("keyup", function(e){
-	var kc = e.keyCode;
+	var kc = e.keyCode
 	if(kc == 65 || kc == 37){ keys.left 	= false }
 	if(kc == 68 || kc == 39){ keys.right 	= false }
 })
