@@ -3,9 +3,6 @@ var $canvas = document.getElementById("board"),
 	x = -50,
 	tick, then, now, dt
 
-$canvas.width = 500
-$canvas.height = 250
-
 then = Date.now() / 1000,
 tick = function(){
 	now = Date.now() / 1000,
@@ -16,12 +13,15 @@ tick = function(){
 	ctx.fillRect(0, 0, 500, 250)
 
 	x += 50 * dt
-	if(x  > 500){
+	if(x > 500){
 		x = -50
 	}
 
 	ctx.fillStyle = "#000"
 	ctx.fillRect(x, (250-50)/2 + Math.sin(now) * 100, 50, 50)
 }
+
+$canvas.width = 500
+$canvas.height = 250
 
 setInterval(tick, 0)
