@@ -18,7 +18,7 @@ tick = function(){
 	}
 
 	ctx.fillStyle = "#000"
-	ctx.fillRect(x, (250-50)/2 + Math.sin(now) * 100, 50, 50)
+	ctx.fillRect(x, (250 - 50) / 2 + Math.sin(now) * 100, 50, 50)
 }
 
 $canvas.width = 500
