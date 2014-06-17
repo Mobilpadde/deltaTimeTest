@@ -1,6 +1,6 @@
 var $canvas = document.getElementById("board"),
 	ctx = $canvas.getContext("2d"),
-	x = -50,
+	x = 0,
 	keys = { left: false, right: false, space: false },
 	tick, then, now, dt,
 
