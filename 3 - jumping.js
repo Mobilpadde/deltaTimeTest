@@ -39,7 +39,7 @@ tick = function(){
 
 	if(keys.space){
 		y -= 50 * dt
-		accY = -3
+		accY = -2
 	}
 	if(y < 200 && y > 120 && !goingDown){
 		y -= 100 * dt - accY
