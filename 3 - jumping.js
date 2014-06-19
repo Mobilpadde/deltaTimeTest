@@ -37,11 +37,11 @@ tick = function(){
 		acc = 0
 	}
 
-	if(keys.space){
+	if(keys.space && !goingDown){
 		y -= 50 * dt
 		accY = -2
 	}
-	if(y < 200 && y > 120 && !goingDown){
+	if(y < 200 && y > 140 && !goingDown){
 		y -= 100 * dt - accY
 		accY += 10 * dt
 	}else{
