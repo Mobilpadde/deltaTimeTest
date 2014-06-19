@@ -24,7 +24,7 @@ tick = function(){
 			x = 500
 		}
 	}else if(!keys.left && !keys.right){
-		acc = 0
+		accX = 0
 	}
 
 	if(keys.right){
@@ -34,7 +34,7 @@ tick = function(){
 			x = -50
 		}
 	}else if(!keys.left && !keys.right){
-		acc = 0
+		accX = 0
 	}
 
 	if(keys.space && !goingDown){
