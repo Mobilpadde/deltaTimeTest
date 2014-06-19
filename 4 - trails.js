@@ -5,6 +5,7 @@ var $canvas = document.getElementById("board"),
 	accX = 0,
 	accY = 0,
 	goingDown = false,
+	tickOver = false,
 	keys = { left: false, right: false, space: false },
 	trails = [],
 	tick, then, now, dt,
@@ -57,6 +58,7 @@ tick = function(){
 		}
 	}
 
+	// Trails of the square
 	ctx.fillStyle = "#000"
 	ctx.fillRect(x, y, 50, 50)
 
@@ -65,10 +67,19 @@ tick = function(){
 		ctx.fillRect(trails[i][0], trails[i][1], 50, 50)
 	}
 
-	trails.push([x, y])
+	if(!tickOver){
+		trails.push([x, y])
+	}
 	if(trails.length > 15){
 		trails.reverse().pop()
 		trails.reverse()
+	}
+
+	// To jump a tick or not to jump a tick, that is the question
+	if(tickOver){
+		tickOver = false
+	}else{
+		tickOver = true
 	}
 }
 
