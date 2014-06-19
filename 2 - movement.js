@@ -20,7 +20,7 @@ tick = function(){
 		if(x < -50){
 			x = 500
 		}
-	}else if(!keys.right){
+	}else if(!keys.left && !keys.right){
 		acc = 0
 	}
 
@@ -30,7 +30,7 @@ tick = function(){
 		if(x > 500){
 			x = -50
 		}
-	}else if(!keys.left){
+	}else if(!keys.left && !keys.right){
 		acc = 0
 	}
 
